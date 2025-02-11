@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 
 # Définition des chemins corrects
-MODEL_PATH = "../app/model.keras"      # Lien du model
-SCALER_PATH = "../app/scalar.pkl"      # Lien du scaler
-FEATURES_PATH = "../app/features.pkl"  # Lien de la Liste des colonnes attendues
+MODEL_PATH = "model.keras"      # Lien du model
+SCALER_PATH = "scalar.pkl"      # Lien du scaler
+FEATURES_PATH = "features.pkl"  # Lien de la Liste des colonnes attendues
 
 # 🛠️ Vérification et chargement des fichiers nécessaires
 if not os.path.exists(MODEL_PATH):
@@ -59,7 +59,7 @@ team_members = [
 ]
 
 for member in team_members:
-    st.sidebar.image(f"../app/images/{member['photo']}", width=400)
+    st.sidebar.image(f"images/{member['photo']}", width=400)
     st.sidebar.write(f"**{member['nom']}** – {member['fonction']}")
 
 # 📌 Ajout du Copyright en bas du Sidebar
